@@ -23,7 +23,8 @@ function App() {
 
   return (
     <div className="container">
-      <h1>علاج الشهر</h1>
+      <h1>شركة التمساح لبناء السفن</h1>
+      <h2>علاج شهري</h2>
       <div className="form-group">
         <label>اسم المريض</label>
         <input
@@ -39,23 +40,22 @@ function App() {
           type="text"
           value={month}
           onChange={(e) => setMonth(e.target.value)}
-          placeholder="الشهر"
         />
       </div>
       <table>
         <thead>
           <tr>
-            <th>الدواء</th>
-            <th>الصنف</th>
             <th>الكميه</th>
+            <th>الصنف</th>
+            <th>الدواء</th>
           </tr>
         </thead>
         <tbody>
           {drugs.map((drug, index) => (
             <tr key={index}>
-              <td><input type="text" name="drug" value={drug.drug} onChange={(e) => handleChange(index, e)} /></td>
-              <td><input type="text" name="item" value={drug.item} onChange={(e) => handleChange(index, e)} /></td>
-              <td><input type="number" name="quantity" value={drug.quantity} onChange={(e) => handleChange(index, e)} /></td>
+              <td><input type="number" name="quantity" className='small' value={drug.quantity} onChange={(e) => handleChange(index, e)} /></td>
+              <td><input type="text" name="item" className='small' value={drug.item} onChange={(e) => handleChange(index, e)} /></td>
+              <td className='big'><input type="text" name="drug" className='big' value={drug.drug} onChange={(e) => handleChange(index, e)} /></td>
             </tr>
           ))}
         </tbody>
@@ -63,12 +63,7 @@ function App() {
       <button className="add-row-btn" onClick={addDrugRow}>إضافة دواء</button>
       <div className="form-group">
         <label>اسم الطبيب</label>
-        <input
-          type="text"
-          value={doctorName}
-          onChange={(e) => setDoctorName(e.target.value)}
-          placeholder="اسم الطبيب"
-        />
+        <p>د/ السيد عبدالعزيز</p>
       </div>
       <button onClick={handlePrint}>طباعة</button>
     </div>

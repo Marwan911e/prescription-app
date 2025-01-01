@@ -33,6 +33,10 @@ label {
   display: block;
 }
 
+.big {
+  width: 500px;
+}
+
 input[type="text"],
 input[type="number"] {
   width: calc(100% - 20px);
