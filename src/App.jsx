@@ -61,9 +61,8 @@ function App() {
         </tbody>
       </table>
       <button className="add-row-btn" onClick={addDrugRow}>إضافة دواء</button>
-      <div className="form-group">
-        <label>اسم الطبيب</label>
-        <p>د/ السيد عبدالعزيز</p>
+      <div className="">
+        <p><strong>اسم الطبيب: </strong>د/ السيد عبد العزيز</p>
       </div>
       <button onClick={handlePrint}>طباعة</button>
     </div>
