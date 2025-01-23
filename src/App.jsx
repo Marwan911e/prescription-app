@@ -24,7 +24,14 @@ function App() {
   return (
     <div className="container">
       <h1>شركة التمساح لبناء السفن</h1>
-      <h2>علاج شهري</h2>
+      <div className="form-group">
+        <label>علاج شهري</label>
+        <input
+          type="text"
+          value={month}
+          onChange={(e) => setMonth(e.target.value)}
+        />
+      </div>
       <div className="form-group">
         <label>اسم المريض</label>
         <input
@@ -32,14 +39,6 @@ function App() {
           value={patientName}
           onChange={(e) => setPatientName(e.target.value)}
           placeholder="اسم المريض"
-        />
-      </div>
-      <div className="form-group">
-        <label>الشهر</label>
-        <input
-          type="text"
-          value={month}
-          onChange={(e) => setMonth(e.target.value)}
         />
       </div>
       <table>
